@@ -122,7 +122,7 @@ function App() {
 
       <section className="mt-5">
         <div className="ms-5 me-5 ps-5 pe-5 d-flex justify-content-center">
-          <p>I&apos;m just a regular guy who enjoys fun and has been told I&apos;ve got a nice cock and ass. I&apos;ve got a good job outside of this, so I&apos;m not in it for the cash — it&apos;s more of a fun hobby. If you want to cut the usual BS and get straight to what we both want, I&apos;m your guy! Also, since I&apos;m not a supermodel, I keep my rates cheaper than others in this business. Hell, if you don&apos;t like my face for whatever reason, I can even wear a balaclava for no additional cost! Let&apos;s have some fun!</p>
+          <p>Hello, there! I&apos;m Fortuna, the balaclava escort. I am a young, bisexual escort who specialises in giving sexual pleasure under the mask of a balaclava, allowing both extroverts <em>and</em> introverts to experience my body. I needn&apos;t brag about or explain my body; you can see it yourself in my pictures &lt;3</p>
         </div>
       </section>
 
