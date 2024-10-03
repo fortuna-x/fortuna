@@ -9,7 +9,7 @@ import { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [selectedServices, setSelectedServices] = useState([]);
+  const [selectedServices, setSelectedServices] = useState<string[]>([]);
   const [numberOfPeople, setNumberOfPeople] = useState(1);
 
   const prices = {
@@ -22,59 +22,64 @@ function App() {
     analBottomNoCondom: 150,
   };
 
-  const handleServiceChange = (event) => {
+  const handleServiceChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { value, checked } = event.target;
 
     if (checked) {
-      setSelectedServices([...selectedServices, value]);
+      setSelectedServices((prev) => [...prev, value]);
 
       if (value === 'handJob') {
         setSelectedServices((prev) =>
-          prev.filter((service) => service !== 'blowJobNoCondom' || service !== 'blowJobCondom')
+          prev.filter((service) => service !== 'blowJobNoCondom' && service !== 'blowJobCondom')
         );
       }
 
       if (value === 'blowJobNoCondom') {
         setSelectedServices((prev) =>
-          prev.filter((service) => service !== 'blowJobCondom' || service !== 'handJob')
+          prev.filter((service) => service !== 'blowJobCondom' && service !== 'handJob')
         );
       }
+
       if (value === 'blowJobCondom') {
         setSelectedServices((prev) =>
-          prev.filter((service) => service !== 'blowJobNoCondom' || service !== 'handJob')
+          prev.filter((service) => service !== 'blowJobNoCondom' && service !== 'handJob')
         );
       }
+
       if (value === 'analTopNoCondom') {
         setSelectedServices((prev) =>
           prev.filter((service) => service !== 'analTopCondom')
         );
       }
+
       if (value === 'analTopCondom') {
         setSelectedServices((prev) =>
           prev.filter((service) => service !== 'analTopNoCondom')
         );
       }
+
       if (value === 'analBottomNoCondom') {
         setSelectedServices((prev) =>
           prev.filter((service) => service !== 'analBottomCondom')
         );
       }
+
       if (value === 'analBottomCondom') {
         setSelectedServices((prev) =>
           prev.filter((service) => service !== 'analBottomNoCondom')
         );
       }
     } else {
-      setSelectedServices(selectedServices.filter((service) => service !== value));
+      setSelectedServices((prev) => prev.filter((service) => service !== value));
     }
   };
 
-  const handlePeopleChange = (event) => {
+  const handlePeopleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setNumberOfPeople(parseInt(event.target.value, 10));
   };
 
   const calculateTotal = () => {
-    const basePrice = selectedServices.reduce((total, service) => total + prices[service], 0);
+    const basePrice = selectedServices.reduce((total, service) => total + prices[service as keyof typeof prices], 0);
     const extraCost = (numberOfPeople - 1) * 50;
     return basePrice + extraCost;
   };
