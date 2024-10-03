@@ -5,7 +5,7 @@ import doggyImg from './assets/Doggy.jpg';
 import cockImg from './assets/Cock1.jpg';
 import balaclavaImg from './assets/Balaclava.png';
 import fortunaLogo from './assets/Fortuna.svg';
-import { useState } from 'react';
+import { useState, ChangeEvent } from 'react';
 import './App.css';
 
 function App() {
