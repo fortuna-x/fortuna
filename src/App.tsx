@@ -20,6 +20,7 @@ function App() {
     analTopNoCondom: 75,
     analBottomCondom: 100,
     analBottomNoCondom: 150,
+    recordingAdditional: 50,
   };
 
   const handleServiceChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -217,6 +218,15 @@ function App() {
                   disabled={selectedServices.includes('analBottomCondom')}
                 />
                 ⠀Anal (Bottom w/o Condom) - £150.00
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  value="recordingAdditional"
+                  onChange={handleServiceChange}
+                  checked={selectedServices.includes('recordingAdditional')}
+                />
+                ⠀Recording (Additional) - £50.00
               </div>
             </div>
             <div className="mb-3">
