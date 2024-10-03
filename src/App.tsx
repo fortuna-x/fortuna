@@ -123,7 +123,7 @@ function App() {
 
       <section className="mt-5">
         <div className="ms-5 me-5 ps-5 pe-5 d-flex justify-content-center">
-          <p>Hello, there! I&apos;m Fortuna, the balaclava escort. I am a young, bisexual escort who specialises in giving sexual pleasure under the mask of a balaclava, allowing both extroverts <em>and</em> introverts to experience my body. I needn&apos;t brag about or explain my body; you can see it yourself in my pictures &lt;3</p>
+          <p>Hello, there! I&apos;m Fortuna, the balaclava escort. I am a young, bisexual escort who specialises in giving sexual pleasure under the mask of a balaclava, allowing both extroverts <em>and</em> introverts to experience my body. I needn&apos;t brag about or explain my body; you can see it yourself in my pictures &lt;3<br /><br /><strong>You must have proper hygine! I will not work with poor-hygine clients!</strong></p>
         </div>
       </section>
 
@@ -226,7 +226,7 @@ function App() {
                   onChange={handleServiceChange}
                   checked={selectedServices.includes('recordingAdditional')}
                 />
-                ⠀Recording (Additional) - £50.00
+                ⠀<strong>Additional</strong> - Recording Allowed - £50.00
               </div>
             </div>
             <div className="mb-3">
