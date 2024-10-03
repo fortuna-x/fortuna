@@ -86,9 +86,15 @@ function App() {
 
   return (
     <main>
-      <section className="pt-5 mb-5">
+      <section className="pt-5 mb-3">
         <div className="d-flex justify-content-center">
           <h1>+44 7537 184372</h1>
+        </div>
+        <div className="mt-2 d-flex justify-content-center">
+          <h5>Text Only - Calls Ignored!</h5>
+        </div>
+        <div className="mt-2 d-flex justify-content-center">
+          <p><em>Repeated calls will result in your number being blocked.</em></p>
         </div>
       </section>
       <section>
